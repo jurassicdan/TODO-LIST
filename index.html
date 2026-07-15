@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CRUD TODO</title>
+  </head>
+  <body>
+    <div class="title_Container">
+      <h1>Dont Be Lazzy</h1>
+    </div>
+
+    <div class="main_Container">
+      <form>
+        <input
+          type="text"
+          placeholder="Tarefa"
+          autocomplete="off"
+          spellcheck="false"
+          name="todo"
+          id="todo"
+          class="todo_Input"
+          onkeydown="if (event.key === 'Enter') return false;"
+          required
+        />
+        <button type="button" name="submit" id="submit" onclick="SubmitClick()">
+          Adicionar Tarefa
+        </button>
+      </form>
+    </div>
+
+    <div class="todo_List">
+      <h3>Tarefas:</h3>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
