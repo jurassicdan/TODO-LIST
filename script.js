@@ -50,7 +50,6 @@ function RemoveTodo(textTodo) {
     return currentText !== textTodo;
   });
 
-  // CORREÇÃO: Faltava salvar a lista atualizada de volta no localStorage!
   localStorage.setItem("todo", JSON.stringify(updatedTodos));
 
   ShowTodos();
@@ -59,7 +58,6 @@ function RemoveTodo(textTodo) {
 function ShowTodos() {
   const Todos = JSON.parse(localStorage.getItem("todo") || "[]");
 
-  // CORREÇÃO: Limpa a tela UMA VEZ SÓ, antes de começar o loop
   List_Container.innerHTML = "";
 
   Todos.forEach((Todo) => {
